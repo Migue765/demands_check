@@ -32,6 +32,8 @@ CREATE TABLE `institution` (
   `id_institution` int PRIMARY KEY,
   `name` varchar(255),
   `status` enum('active', 'inactive', 'lock'),
+  id_samui int
+  id_institution int
   `fk_id_location` int
 );
 
