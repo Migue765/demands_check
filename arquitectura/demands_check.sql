@@ -1,7 +1,7 @@
 CREATE TABLE `request` (
   `id_request` int PRIMARY KEY,
   `fk_id_institucion` int,
-  `status` enum,
+  `status` enum('active', 'invactive', 'error'),
   `id_proceso` int,
   `nombre` varchar(255),
   `fk_id_ws_samai` int,
@@ -14,7 +14,7 @@ CREATE TABLE `request` (
 
 CREATE TABLE `ws_samai` (
   `id_ws_samai` int PRIMARY KEY,
-  `status` enum,
+  `status` enum('update', 'outdated', 'error', 'inactive'),
   `update` datetime,
   `added_at` datetime,
   `modified_at` datetime
@@ -22,7 +22,7 @@ CREATE TABLE `ws_samai` (
 
 CREATE TABLE `ws_judicial` (
   `id_ws_judicial` int PRIMARY KEY,
-  `status` enum,
+  `status` enum('update', 'outdated', 'error', 'inactive'),
   `update` datetime,
   `added_at` datetime,
   `modified_at` datetime
@@ -31,14 +31,14 @@ CREATE TABLE `ws_judicial` (
 CREATE TABLE `institution` (
   `id_institution` int PRIMARY KEY,
   `name` varchar(255),
-  `status` enum,
+  `status` enum('active', 'inactive', 'lock'),
   `fk_id_location` int
 );
 
 CREATE TABLE `location` (
   `id_location` int PRIMARY KEY,
   `name` varchar(255),
-  `type` enum,
+  `type` enum('country', 'department', 'region', 'city'),
   `fk_id_location` int,
   `added_at` datetime,
   `modified_at` datetime
@@ -55,7 +55,7 @@ CREATE TABLE `actions` (
 CREATE TABLE `email` (
   `id_email` int PRIMARY KEY,
   `fk_id_request` int,
-  `status` enum,
+  `status` enum('verified', 'not verified'),
   `added_at` datetime
 );
 
