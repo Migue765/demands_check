@@ -1,5 +1,5 @@
 # Demands check
-Esta aplicativo funciona para automatizar las funciones de validacion de procesos de demandas, así mismo como un sistema de notificación via correo electronico.
+Esta software funciona para automatizar las funciones de validacion de procesos de demandas, así mismo como un sistema de notificación via correo electronico.
 
 ## Arquitectura local
 Por medio de al libreria sqllite usaremos una arquitectura estructurada local
