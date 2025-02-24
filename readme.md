@@ -14,6 +14,8 @@ Se usara selenium para la extración en la web a los portales SAMAI y rama judic
 En esta carpeta se guardara toda la información del desarrollo del proyecto.
 
 
+
+
 ## Requerimientos
 1. Instalar python 3.12
 2. Instalar Selenium
